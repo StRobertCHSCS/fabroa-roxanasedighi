@@ -17,19 +17,22 @@ passive_buzzer = pin0
 moisture_sensor = pin1
 led_red = pin2
 
-while True:
-    if moisture_sensor.read_analog() == 17:
-        print("Your plant is in good condition.")
-        music.play(music.NYAN)
-        display.show(Image.HAPPY)
+#running pins
+pin0.write_analog(1)
+pin1.write_analog(1)
+pin2.write_analog(1)
 
-    elif button_a.is_pressed or 5 <= moisture_sensor <= 12:
-        print("Water your plant every two days.")
-        music.play(music.JUMP_DOWN)
-        display.scroll(temperature()) == 18
+if moisture_sensor.read_analog() > 17:
+    display.scroll("Your plant is in good condition.")
+    music.play(music.NYAN)
+    display.show(Image.HAPPY)
 
-    else:
-        print("you need to change the soil of the plant.")
-        display.show(Image.SAD)
-        led_red.write_digital(1)
+elif button_a.get_presses() or button_b.get_presses():
+    display.scroll("Water your plant every two days.")
+    music.play(music.JUMP_DOWN)
+
+else:
+    display.scroll("you need to change the soil of the plant.")
+    led_red.write_digital(1)
+    display.show(Image.SAD)
         
