@@ -25,6 +25,7 @@ while True:
         display.scroll("Your plant is in good condition.")
         music.play(music.NYAN)
         display.show(Image.HAPPY)
+        sleep(10000)
 
     elif button_a.get_presses() or button_b.get_presses():
         display.scroll("Water your plant every two days.")
@@ -34,5 +35,7 @@ while True:
     else:
         display.scroll("you need to change the soil of the plant.")
         music.play(music.WAWAWAWAA)
-        display.show(Image.SAD)
         led_red.write_digital(1)
+        display.show(Image.SAD)
+        sleep(10000)
+        
