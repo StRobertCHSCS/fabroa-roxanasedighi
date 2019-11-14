@@ -20,3 +20,4 @@ elif marks >= 80:
     print("You get to go to California.")
 else:
     print("You stay home :(")
+    

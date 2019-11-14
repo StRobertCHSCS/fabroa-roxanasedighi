@@ -1,6 +1,6 @@
 '''
 -------------------------------------------------------------------------------
-Name:		1_livehack_practice_solution1.py
+Name:		2_livehack_practice_solution1.py
 Purpose:	Determine if a triangle is a right angle triangle
 
 Author:	Sedighi.R
