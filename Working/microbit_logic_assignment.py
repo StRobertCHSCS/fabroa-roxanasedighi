@@ -12,12 +12,12 @@ Created:	date in 30/10/2019
 from microbit import *
 import music
 
-while True:
     #defining pins
     passive_buzzer = pin0
     moisture_sensor = pin1
     led_red = pin2
 
+while True:
     #running temeprature sensor
     temp = temperature()
 
