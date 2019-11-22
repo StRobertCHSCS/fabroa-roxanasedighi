@@ -1,7 +1,7 @@
-# get numbers
-number1 = int(input("Enter your starting number: "))
-number2 = int(input("Enter your ending number: "))
+# get number
+start = int(input("Enter your starting number: "))
+end = int(input("Enter your ending number: "))
 
 # output range
-for i in range(number1, number2+1):
+for i in range(start, end+1):
     print(i)
